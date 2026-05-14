@@ -30,28 +30,3 @@ customHeaderRequest(url, function(err, resp, body){
   const execSync = require('child_process').execSync;
   code = execSync('blc ' + url + ' -ro > ' + url + '_brokens.txt' );
 });
-
-
-/* const execSync = require('child_process').execSync;
-code = execSync('node -v'); */
-
-//col-sm-8 class of div with links
-
-/* var blc = require('broken-link-checker')
-
-var options = {};
-
-var siteChecker = new blc.SiteChecker(options, {
-	robots: function(robots, customData){},
-	html: function(tree, robots, response, pageUrl, customData){},
-	junk: function(result, customData){},
-	link: function(result, customData){
-
-        console.log(result.html.location.line + " " + result.brokenReason + " " + result.url.original)
-    },
-	page: function(error, pageUrl, customData){},
-	site: function(error, siteUrl, customData){},
-	end: function(){}
-});
-
-siteChecker.enqueue("https://de.gov/"); */
